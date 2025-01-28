@@ -1,0 +1,49 @@
+{
+  "name": "back",
+  "version": "1.0.0",
+  "description": "## Préparation du projet",
+  "main": "jest.config.js",
+  "scripts": {
+    "watch": "rimraf dist && tsc --watch",
+    "serve": "nodemon dist/api.js --no-colors",
+    "start": "node dist/start.js",
+    "build": "tsc",
+    "test:unit": "jest --config=jest.unit.config.js",
+    "test:unit:watch": "jest --config=jest.unit.config.js --watchAll",
+    "test:it": "jest --runInBand --config=jest.integration.config.js",
+    "test:it:watch": "jest --runInBand --config=jest.integration.config.js --watchAll",
+    "test:e2e": "jest --runInBand --config=jest.e2e.config.js",
+    "test:e2e:watch": "jest --runInBand --config=jest.e2e.config.js --watchAll",
+    "test": "jest --runInBand --config=jest.config.js",
+    "test:watch": "jest --runInBand --config=jest.config.js --watchAll",
+    "test:coverage": "jest --runInBand --config=jest.config.js --coverage"
+  },
+  "_moduleAliases": {
+    "@primary": "dist/adapters/primary",
+    "@secondary": "dist/adapters/secondary",
+    "@hexagon": "dist/hexagon",
+    "@infrastructures": "dist/infrastructures",
+    "@test": "dist/test",
+    "@dependencies": "dist/dependencies.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/supertest": "^6.0.2",
+    "jest": "^29.7.0",
+    "rimraf": "^6.0.1",
+    "ts-jest": "^29.2.5",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "@myfiteco/koa-router": "2.1.0",
+    "@myfiteco/validator": "1.32.3",
+    "date-fns": "^4.1.0",
+    "dotenv": "^16.4.7",
+    "module-alias": "^2.2.3",
+    "nodemon": "^3.1.9",
+    "supertest": "^7.0.0"
+  }
+}
