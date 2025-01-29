@@ -5,6 +5,3 @@ fake
 
 coverage/*
 !coverage/lcov.info
-
-.env*
-!.env*.example
