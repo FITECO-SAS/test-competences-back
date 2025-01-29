@@ -8,7 +8,7 @@ interface RouteDefinition {
 }
 export interface Context<T extends RouteDefinition = DefaultContext> extends ExtendableContext {
   query: ParsedUrlQuery & T['query']
-  params: T['params']
-  request: Omit<Request, 'body'> & { body: T['body'] }
+  params: unknown
+  request: Omit<Request, 'body'> & { body: T['body'] } & { params: T['params'] }
   body: unknown
 }

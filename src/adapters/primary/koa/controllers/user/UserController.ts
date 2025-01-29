@@ -17,7 +17,7 @@ export class UserController {
   public async update(ctx: UserUpdateContext): Promise<void> {
     /**
      * TODO : Brancher le cas d'utilisation
-     * ctx.params contient les paramètres de l'url
+     * ctx.request.params contient les paramètres de l'url
      * ctx.request.body contient le corps de la requête
      */
     const updateUser = new UpdateUser();

@@ -18,6 +18,6 @@ export class UserRepositoryStub implements UserRepository {
   }
   
   public set updateOneData(data: User | null) {
-    this.updateOneData = data;
+    this._updateOneData = data;
   }
 }
