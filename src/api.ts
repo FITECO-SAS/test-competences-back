@@ -5,6 +5,7 @@ import { App } from '@primary/koa/App';
 import { controllers } from '@primary/koa/controllers';
 
 const run = async () => {
+  // BONUS : ABRICOT
   const app = new App(controllers);
   await app.initServer();
   app.listen(dependencies.config.port);

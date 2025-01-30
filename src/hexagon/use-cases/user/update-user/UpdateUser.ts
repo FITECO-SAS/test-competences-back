@@ -10,7 +10,11 @@ import { UserRepository } from "@hexagon/repositories/UserRepository";
  * - Retourner l'utilisateur mis à jour
  */
 export class UpdateUser {
-  public constructor () {}
+  public constructor () {
+    // BONUS : PASTEQUE
+  }
 
-  public execute () {}
+  public execute () {
+    
+  }
 }

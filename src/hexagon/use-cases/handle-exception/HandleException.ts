@@ -25,6 +25,7 @@ export class HandleException {
     try {
       await processExecution();
     } catch (error) {
+      // BONUS : FRAISE
       const status = error instanceof HttpException ? error.status : 500;
       this._logProvider.error(`[${status}] → ${data.method.toUpperCase()} ${data.path} (${data.controller}.${data.action})`);
 

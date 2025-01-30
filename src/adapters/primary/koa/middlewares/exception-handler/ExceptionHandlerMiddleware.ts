@@ -12,7 +12,7 @@ export class ExceptionHandlerMiddleware extends Middleware {
 
   public async handle(ctx: Context, next: Next) {
     const handleException = new HandleException(dependencies.logProvider);
-
+    
     const result = await handleException.execute(
       {
         action: this._action,

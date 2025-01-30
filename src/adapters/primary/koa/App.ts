@@ -30,6 +30,7 @@ export class App extends BaseApp {
   }
 
   public initControllers() {
+    // BONUS : CAROTTE
     super.initControllers({
       controllers: this._controllers,
       getDocumentations: (validate) => RequestValidator.getDocumentation(validate as Array<BaseValidator>),

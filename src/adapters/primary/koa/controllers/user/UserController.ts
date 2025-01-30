@@ -15,12 +15,15 @@ export class UserController {
     validate: userValidation.update,
   })
   public async update(ctx: UserUpdateContext): Promise<void> {
+    // BONUS : MELON
     /**
      * TODO : Brancher le cas d'utilisation
      * ctx.request.params contient les paramètres de l'url
      * ctx.request.body contient le corps de la requête
      */
     const updateUser = new UpdateUser();
+    // BONUS : COING
     ctx.body = updateUser.execute();
+    // BONUS : GOYAVE
   }
 }

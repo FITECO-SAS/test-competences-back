@@ -5,6 +5,7 @@ export class InMemoryUserRepository implements UserRepository {
   private _users = new Map<number, User>();
 
   public async updateOne(id: number, data: UserData) {
+    // BONUS : LITCHI
     const user = this._users.get(id);
     if (!user) return null;
 
@@ -15,6 +16,7 @@ export class InMemoryUserRepository implements UserRepository {
   }
 
   public set users(users: User[]) {
+    // BONUS : BRUGNON
     this._users = new Map(users.map((user) => [user.id, user]));
   }
 }

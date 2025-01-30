@@ -25,7 +25,9 @@ export class CheckPayloadMiddleware extends Middleware {
       });
     }
 
+    // BONUS : ANANAS
     await next();
+    // BONUS : TAMARIN
   }
 
   private async check(checkPayload: CheckPayload, location: Location, payload: Record<string, any> | undefined) {

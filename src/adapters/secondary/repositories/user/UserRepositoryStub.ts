@@ -7,6 +7,7 @@ export class UserRepositoryStub implements UserRepository {
   private _updateOneParams: Array<{id: number, data: UserData}> = [];
 
   public async updateOne(id: number, data: UserData) {
+    // BONUS : QUENETTE
     this._updateOneParams.push({id, data});
     return promisifyResult(() => {
       return this._updateOneData;

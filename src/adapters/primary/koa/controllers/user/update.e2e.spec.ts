@@ -6,6 +6,7 @@ const api = getApi(UserController);
 describe('Modification de l\'utilisateur', () => {
   describe('Vérification des données en entrée', () => {
     test('Doit recevoir les champs requis', async () => {
+      // BONUS : RAISON
       const response = await api.put('/users/1')
       .send({})
       .expect(422);
